@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: "Ubuntu", sans-serif;
+    overflow-x: hidden;
 }
 
 body {
@@ -15,7 +16,7 @@ body {
     width: 100%;
     padding: 20px;
     display: inline-flex;
-    box-shadow: -20px 25px 20px #1a1712;
+    box-shadow: 0px 25px 20px 20px #1a1712;
 }
 .topBar.Title {
     color: white;
@@ -34,6 +35,22 @@ body {
     border: 0;
     margin: 5px;
 }
+.topBar.Buttons.button:hover {
+    background-color: #61594e;
+    color: white;
+    font-size: 1em;
+    border-radius: 10px;
+    border: 0;
+    margin: 5px;
+}
+.topBar.Buttons.button:active {
+    background-color: #302d29;
+    color: white;
+    font-size: 1em;
+    border-radius: 10px;
+    border: 0;
+    margin: 5px;
+}
 
 .mainFrame.textarea {
     margin: 10%;
@@ -45,4 +62,28 @@ body {
 }
 span.text {
     font-size: 1.5em;
+}
+span.text button {
+    background-color: #abb2ba;
+    border: 0;
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    font-size: 1.2em;
+}
+span.text button:hover {
+    background-color: #868b91;
+    border: 0;
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    font-size: 1.2em;
+}
+span.text button:active {
+    background-color: #a6adb6;
+    border: 0;
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    font-size: 1.2em;
 }
