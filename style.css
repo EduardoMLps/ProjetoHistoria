@@ -99,10 +99,10 @@ body {
     background-color:#302d29;
 }
 
-.mainFrame {
+#mainFrame {
     margin-top: 20px;
 }
-.mainFrame.textarea {
+#mainFrame .textarea {
     margin: 10%;
     padding: 15px;
     background-color: white;
@@ -110,10 +110,11 @@ body {
     align-self: center;
     box-shadow: 0px 0px 30px 10px #1a1712;
 }
-span.text {
+#mainFrame .textarea span.text {
     font-size: 1.5em;
+    color: black;
 }
-span.text button {
+#mainFrame .textarea span.text button {
     background-color: #abb2ba;
     border: 0;
     border-radius: 10px;
@@ -122,19 +123,19 @@ span.text button {
     font-size: 1.2em;
     align-items: center;
 }
-span.text button:hover {
+#mainFrame .textarea span.text button:hover {
     background-color: #868b91;
     border: 0;
     border-radius: 10px;
     font-size: 1.2em;
 }
-span.text button:active {
+#mainFrame .textarea span.text button:active {
     background-color: #a6adb6;
     border: 0;
     border-radius: 10px;
     font-size: 1.2em;
 }
-span.text div.text.ButtonArea {
+#mainFrame .textarea span.text div.text.ButtonArea {
     margin-top: 5px;
     border-top: 0px solid;
 }
@@ -147,7 +148,7 @@ span.text div.text.ButtonArea {
     padding-left: 10%;
     padding-right: 10%;
 }
-#aboutArea h1,h2,h3 {
+#aboutArea h1, #aboutArea h2, #aboutArea h3 {
     color: white;
 }
 #aboutArea .Areas {
@@ -180,14 +181,18 @@ span.text div.text.ButtonArea {
     .topBar.Buttons .buttonBarB {
         display: inline;
     }
-    .mainFrame.textarea {
+    #mainFrame {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    #mainFrame .textarea {
         box-shadow: 0px 0px 10px 5px #1a1712;
         margin: 7%;
     }
-    span.text {
+    #mainFrame .textarea span.text {
         font-size: 1em;
     }
-    span.text button {
+    #mainFrame .textarea span.text button {
         height: 30px;
         width: 30px;
     }
