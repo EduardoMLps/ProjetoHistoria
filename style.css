@@ -24,11 +24,14 @@ body {
 }
 .topBar.Buttons {
     display: inline-flex;
-    width: 70%;
+    flex-direction: row-reverse;
+    width: 80%;
     height: 80%;
 }
-.topBar.Buttons button {
+.topBar.Buttons .button {
+    display: inline;
     background-color: #403a31;
+    align-self: center;
     color: white;
     font-size: 1em;
     border-radius: 10px;
@@ -36,8 +39,21 @@ body {
     margin: 5px;
     box-shadow: none;
 }
+.topBar.Buttons .buttonBarB {
+    display: none;
+    background-color: #403a31;
+    align-self: center;
+    align-content: center;
+    padding: 5px;
+    margin: 5px;
+    width: 70px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0;
+}
 .topBar.Buttons button:hover {
     background-color: #61594e;
+    cursor: pointer;
     color: white;
     font-size: 1em;
     border-radius: 10px;
@@ -53,6 +69,39 @@ body {
     margin: 5px;
 }
 
+#menuArea {
+    display: none;
+    background-color: #00000088;
+    box-shadow: 0px 0px 20px 20px #00000088;
+}
+#menuArea .menuOptions {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    margin-top: 10%;
+    color: white;
+}
+#menuArea .menuOptions .options {
+    background-color: #403a31;
+    border: 0;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    width: 50%;
+    color: white;
+    font-size: 1.3em;
+}
+#menuArea .menuOptions .options:hover {
+    background-color:#61594e;
+    cursor: pointer;
+}
+#menuArea .menuOptions .options:active {
+    background-color:#302d29;
+}
+
+.mainFrame {
+    margin-top: 20px;
+}
 .mainFrame.textarea {
     margin: 10%;
     padding: 15px;
@@ -71,24 +120,80 @@ span.text button {
     height: 50px;
     width: 50px;
     font-size: 1.2em;
+    align-items: center;
 }
 span.text button:hover {
     background-color: #868b91;
     border: 0;
     border-radius: 10px;
-    height: 50px;
-    width: 50px;
     font-size: 1.2em;
 }
 span.text button:active {
     background-color: #a6adb6;
     border: 0;
     border-radius: 10px;
-    height: 50px;
-    width: 50px;
     font-size: 1.2em;
 }
 span.text div.text.ButtonArea {
     margin-top: 5px;
     border-top: 0px solid;
+}
+
+#aboutArea {
+    background-color: #1a1712;
+    box-shadow: 0px 0px 20px 40px #1a1712;
+    display: block;
+    padding: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+#aboutArea h1,h2,h3 {
+    color: white;
+}
+#aboutArea .Areas {
+    display: flex;
+}
+#aboutArea .socialArea {
+    flex: 1;
+    margin: 10px;
+    display:block;
+    background-color: #403a31;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+}
+#aboutArea .socialArea a {
+    display: inline-flex;
+    color: white;
+    align-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 859px) {
+    .topBar.Buttons {
+        width: auto;
+    }
+    .topBar.Buttons .button {
+        display: none;
+    }
+    .topBar.Buttons .buttonBarB {
+        display: inline;
+    }
+    .mainFrame.textarea {
+        box-shadow: 0px 0px 10px 5px #1a1712;
+        margin: 7%;
+    }
+    span.text {
+        font-size: 1em;
+    }
+    span.text button {
+        height: 30px;
+        width: 30px;
+    }
+}
+@media screen and (max-width: 586px) {
+    #aboutArea .Areas {
+        display: block;
+    }
 }
