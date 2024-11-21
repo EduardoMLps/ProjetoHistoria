@@ -20,7 +20,7 @@ body {
 }
 .topBar.Title {
     color: white;
-    font-size: 50px;
+    font-size: 2.8em;
 }
 .topBar.Buttons {
     display: inline-flex;
@@ -172,6 +172,9 @@ body {
 }
 
 @media screen and (max-width: 859px) {
+    .topBar .Title {
+        font-size: 2.2em;
+    }
     .topBar.Buttons {
         width: auto;
     }
